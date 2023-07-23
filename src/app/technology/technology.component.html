@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header>
+    <div class="text">
+      <h3><span>03</span> SPACE LAUNCH 101</h3>
+    </div>
+
+    <div class="technology">
+      <div class="text-div">
+        <div class="oval-div">
+          <div class="oval" [class.color]="id === 'mission'" (click)="tabChange('mission')" (click)="changeImg()"
+            (click)="changeText()" (click)="changePara()">
+            1
+          </div>
+          <div class="oval" [class.color]="id === 'white'" (click)="changeImg2()" (click)="tabChange('white')"
+            (click)="changeText2()" (click)="changePara2()">
+            2
+          </div>
+          <div class="oval" [class.color]="id === 'version'" (click)="tabChange('version')" (click)="changeImg3()"
+            (click)="changeText3()" (click)="changePara3()">
+            3
+          </div>
+        </div>
+        <h4>THE TERMINOLOGY…</h4>
+        <h1>{{ text }}</h1>
+        <p>
+          {{ para }}
+        </p>
+      </div>
+      <div class="img2">
+        <img class="img" src="{{ img }}" alt="" />
+      </div>
+    </div>
+
+  </header>
+</body>
+
+</html>

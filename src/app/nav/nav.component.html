@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header main">
+    <div class="wrap flex">
+      <div style="cursor: pointer" routerLink="/explore" class="logo flex">
+        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+          <g fill="none" fill-rule="evenodd">
+            <circle cx="24" cy="24" r="24" fill="#FFF" />
+            <path fill="#0B0D17"
+              d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z" />
+          </g>
+        </svg>
+      </div>
+      <div class="icon-bar" (click)="toogleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path class="hamb" fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </div>
+      <div class="icon-menu" *ngIf="isMenuOpened">
+        <ul>
+          <div class="close" (click)="closeMenu()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="19.09" height="19.09" fill="currentColor" class="bi bi-x-lg"
+              viewBox="0 0 16 16">
+              <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+          </div>
+          <li routerLink="/explore" routerLinkActive="active">00 HOME</li>
+          <li routerLink="/destination" routerLinkActive="active">
+            01 DESTINATION
+          </li>
+          <li routerLink="/crew" routerLinkActive="active">02 CREW</li>
+          <li routerLink="/technology" routerLinkActive="active">
+            03 TECHNOLOGY
+          </li>
+          <li routerLink="/registration" routerLinkActive="active">
+            04 Registration
+          </li>
+        </ul>
+      </div>
+      <div class="back">
+        <nav class="navbar">
+          <ul class="nav flex">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/explore" routerLinkActive="active" href="#">00 HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/destination" routerLinkActive="active" href="#">01 DESTINATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/crew" routerLinkActive="active" href="#">02 CREW</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/technology" routerLinkActive="active" href="#">03 TECHNOLOGY</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+</body>
+
+</html>

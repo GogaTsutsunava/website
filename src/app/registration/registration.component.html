@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   <header>
+    <div class="form">
+      <form action="/action_page.php">
+        <label for="fname">User name:</label><br />
+        <input
+          class="text"
+          type="text"
+          id="fname"
+          name="fname"
+          required
+          minlength="4"
+          placeholder="User name"
+          [formControl]="name"
+        /><br />
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+          <div style="color: red;" *ngIf="name.errors?.['required']">Name is required.</div>
+          <div *ngIf="name.errors?.['minlength']" style="color: red;">
+            Name must be at least 4 characters long.
+          </div>
+        </div>
+        <label for="fname">password:</label><br />
+        <input
+          class="text-2"
+          type="password"
+          name="fname"
+          required
+          minlength="8"
+          placeholder="Password"
+          id="pas"
+          [formControl]="password"
+        />
+        <br>
+        <br>
+        <div
+          *ngIf="password.invalid && (password.dirty || password.touched)"
+          class="alert"
+        >
+          <div style="color: red;" *ngIf="password.errors?.['required']">Password is required</div>
+          <div style="color: red;"  *ngIf="password.errors?.['minlength']">
+            Password must be at last 8 characters long
+          </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-lg">Sign up</button>
+      </form>
+    </div>
+   </header>
+  </body>
+</html>

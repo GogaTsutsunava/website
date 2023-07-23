@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="text">
+      <h3><span>01</span> pick your destination</h3>
+    </div>
+    <header>
+      <div class="flex">
+        <div>
+          <img class="moon" src="{{ moonImg }}" alt="" />
+        </div>
+
+        <div class="planets texts" style="color: #ffff">
+          <div>
+            <ul class="d-flex moon-menu justify-content-start px-2">
+              <li
+                (click)="changeTxt4()"
+                (click)="change2()"
+                (click)="changeImg()"
+                (click)="changeh3()"
+              >
+                MOON
+              </li>
+              <li
+                (click)="changeTxt()"
+                (click)="change()"
+                (click)="changeImg1()"
+                (click)="changeh32()"
+              >
+                MARS
+              </li>
+              <li
+                (click)="changeTxt2()"
+                (click)="change3()"
+                (click)="changeImg2()"
+                (click)="changeh33()"
+              >
+                EUPORA
+              </li>
+              <li
+                (click)="changeTxt3()"
+                (click)="change4()"
+                (click)="changeImg3()"
+                (click)="changeh34()"
+              >
+                TITAN
+              </li>
+            </ul>
+            <h1>{{ moon }}</h1>
+          </div>
+          <p class="txt">{{ paragraph1 }}</p>
+          <hr />
+          <div class="flex-items">
+            <div class="span">
+              <span>AVG. DISTANCE</span>
+              <h3>{{ h3 }}</h3>
+            </div>
+            <div class="span">
+              <span>Est. travel time</span>
+              <h3>{{ h32 }}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>
