@@ -1,0 +1,244 @@
+header {
+  background-image: url("/assets/images/background-destination-desktop.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: #ffffff;
+  padding: 50px;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  letter-spacing: 4.725px;
+  text-transform: uppercase;
+}
+
+.moon {
+
+  animation: spin 5s linear infinite;
+  animation-play-state: paused;
+  /* Initial state is paused */
+  transform-origin: center;
+  /* Rotate around its center */
+  display: block;
+  cursor: pointer;
+}
+
+/* On hover, start spinning the moon */
+.moon:hover {
+  animation-play-state: running;
+}
+
+/* Keyframes for the spinning effect */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: normal;
+
+  span {
+    color: #41434b;
+  }
+}
+
+.flex {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  gap: 20%;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #d0d6f9;
+  transition-property: all;
+  transition-duration: 0.4s;
+  transition-delay: 0.1s;
+}
+
+li:hover {
+  color: red;
+}
+
+h1 {
+  font-family: "Bellefair", serif;
+  font-size: 100px;
+}
+
+.txt {
+  width: 450px;
+  color: #d0d6f9;
+  font-family: "Barlow";
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.span span {
+  color: #d0d6f9;
+}
+
+.text-light {
+  font-family: "Bellefair", serif;
+}
+
+.flex-items {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+  font-family: "Bellefair", serif;
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  header {
+    background-image: url("/assets/images/background-destination-tablet.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .txt {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    /* or 175% */
+    text-align: center;
+  }
+
+  h1 {
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 92px;
+  }
+
+  .text {
+    left: 5%;
+    letter-spacing: 3.375px;
+    line-height: 24px;
+    top: 5%;
+  }
+
+  .flex-items {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    font-family: "Bellefair", serif;
+  }
+
+  .moon {
+    width: 300px;
+    height: 300px;
+  }
+
+  .moon-menu {
+    display: flex;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    background-image: url("/assets/images/background-destination-mobile.jpg");
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .txt {
+    font-family: "Barlow";
+    font-style: normal;
+    font-weight: 400;
+    width: 327px;
+    height: 125px;
+    font-size: 15px;
+    line-height: 25px;
+    /* or 167% */
+
+    text-align: center;
+  }
+
+  h1 {
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+
+  .text {
+    left: 5%;
+    letter-spacing: 4.375px;
+    display: flex;
+    align-items: center;
+    top: 5%;
+  }
+
+  .moon {
+    width: 170px;
+    height: 170px;
+    left: 50%;
+    text-align: center;
+    top: 35%;
+  }
+
+  .span-flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .span h3 {
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 32px;
+    /* identical to box height */
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .moon-menu {
+    display: flex;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}

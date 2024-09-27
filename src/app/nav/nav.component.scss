@@ -1,0 +1,179 @@
+.flex {
+  display: flex;
+  justify-content: end;
+  // flex-wrap: wrap;
+  padding: 0px 0px 0px 50px;
+  align-items: center;
+}
+
+header {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:focus {
+  text-decoration: solid 2px underline;
+  color: #ffffff;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.wrap {
+  height: 200px;
+  justify-content: space-between;
+}
+
+.logo {
+  align-items: center;
+}
+
+.back {
+  background: hsl(0 0% 100% / 0.1);
+  // backdrop-filter: blur(1rem);
+  width: 50%;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.logo a {
+  font-size: 2rem;
+  font-weight: bold;
+  align-items: center;
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.icon-bar {
+  display: none;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  // height: 100%;
+  align-items: center;
+  // padding-left: 10%;
+  letter-spacing: 2.7px;
+  line-height: 19px;
+}
+li {
+  list-style: none;
+}
+.icon-menu {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(40.7742px);
+  position: absolute;
+  width: 254px;
+  height: 100vh;
+  right: 0px;
+  top: 0px;
+  color: #ffffff;
+  z-index: 99;
+  animation-name: cssAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  display: block;
+}
+
+.close {
+  position: absolute;
+  position: absolute;
+  cursor: pointer;
+  left: 200px;
+  top: -50px;
+}
+.icon-menu ul {
+  display: flex;
+  flex-direction: column;
+  //   align-items: center;
+  position: absolute;
+  top: 15%;
+}
+.icon-menu li {
+  margin-top: 30px;
+  height: 19px;
+  font-family: "Barlow Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  cursor: pointer;
+  color: #ffffff;
+}
+.navbar li {
+  padding: 0 2.7em;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+}
+.icon-menu li:hover {
+  text-decoration: underline;
+}
+
+.navbar a {
+  font-size: 1.125rem;
+  display: block;
+  padding: 0.3em;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .back {
+    width: 450px;
+    padding: 10px;
+  }
+  .wrap {
+    height: 96px;
+    // justify-content: start;
+  }
+  .navbar ul {
+    letter-spacing: 2.3625px;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .navbar a {
+    font-size: 14px;
+  }
+  .navbar li {
+    line-height: 17px;
+    padding: 0.7rem 0;
+  }
+}
+@media (max-width: 375px) {
+  .back {
+    background: none;
+  }
+  .icon-bar {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    justify-content: end;
+    position: absolute;
+    right: 10%;
+    color: white;
+  }
+  header {
+    position: absolute;
+    width: 100%;
+    overflow: visible;
+  }
+  .navbar {
+    display: none;
+  }
+  .back {
+    background: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
